@@ -9,7 +9,7 @@ export const authRoutes = [
     "/auth/register",
     "/auth/error",
     "/auth/reset",
-    "auth/new-password"
+    "/auth/new-password"
 ]
 /** @type {String} */
 export const apiRoutePrefix ="/api/auth"
