@@ -3,9 +3,11 @@ import React from 'react'
 
 export const getPasswordResetToken = async (token:string) => {
  try {
-    const passwordResetToken = await db.verificationToken.findUnique({
+    console.log(token)
+    const passwordResetToken = await db.passwordResetToken.findFirst({
         where:{token}
     })
+    console.log("passww",passwordResetToken)
 return passwordResetToken
  } catch (error) {
     return null
