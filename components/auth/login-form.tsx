@@ -44,8 +44,8 @@ export const LoginForm = () => {
   const form = useForm<z.infer<typeof LoginSchema>>({
     resolver:zodResolver(LoginSchema),
     defaultValues:{
-      email: "",
-      password: ""
+      email: "olawunitemitope61@gmail.com",
+      password: "Topman+1885"
     }
   })
   return (
@@ -72,6 +72,7 @@ export const LoginForm = () => {
                     disabled={isPending}
                     {...field}
                     placeholder="123456"
+                    defaultValue="olawunitemitope61@gmail.com"
                     />
                   </FormControl>
                     <FormMessage/>
