@@ -1,12 +1,12 @@
 "use server"
 import bcrypt from "bcryptjs"
 
-import { RegisterSchema } from "@/schema"
 import * as z from "zod"
 import { db } from "@/lib/db"
 import { getUserByEmail } from "@/data/user"
 import { generateVerificationToken } from "@/lib/token"
 import { SendVerificationEail } from "@/lib/mail"
+import { RegisterSchema } from "@/schema"
 
 
 export const register = async (values: z.infer<typeof RegisterSchema>) =>

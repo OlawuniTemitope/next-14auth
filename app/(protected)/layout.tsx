@@ -7,12 +7,14 @@ interface ProtectedLayoutProps {
 
 const ProtectedLayout = ({children}:ProtectedLayoutProps) => {
   return (
-    <div className=" flex h-full items-center justify-center gap-y-10
-    w-screen flex-col bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))]
+    <div className=" flex h-full items-center justify-center mx-auto gap-y-10
+    w-screen  flex-col bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))]
     from-sky-400 to-blue-800">
+      <div className="space-y-11 h-screen mt-28">
         <Navbar/>
         {children}
         </div>
+      </div>
   )
 }
 

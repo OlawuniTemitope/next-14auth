@@ -10,14 +10,14 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui/select"
 import { Switch } from "@/components/ui/switch"
-import { SettingsSchema } from "@/schema"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { UserRole } from "@prisma/client"
+import { UserRole } from '@prisma/client'
 import { SelectValue } from "@radix-ui/react-select"
 import { useSession } from "next-auth/react"
 import { useState, useTransition } from "react"
 import {  useForm } from "react-hook-form"
 import * as z  from "zod"
+import { SettingsSchema } from "@/schema"
 
 
 

@@ -2,7 +2,7 @@
 import * as z from "zod"
 import { CardWrapper } from './card-wrapper'
 import {  useForm } from 'react-hook-form'
-import { NewPasswordSchema } from "@/schema"
+
 import { zodResolver } from "@hookform/resolvers/zod"
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form"
 import { Input } from "../ui/input"
@@ -12,6 +12,7 @@ import { FormSuccess } from "../form-success"
 import { useState, useTransition } from "react"
 import { useSearchParams } from "next/navigation"
 import { newPasswword } from "@/actions/new-Password"
+import { NewPasswordSchema } from "@/schema"
 
 export const NewPasswordForm = () => {
   const searchParams = useSearchParams()

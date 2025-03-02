@@ -2,10 +2,10 @@
 import * as z from "zod"
 import bcrypt from "bcryptjs"
 
-import { NewPasswordSchema } from "@/schema"
 import { getPasswordResetToken } from "@/data/password-resetToken"
 import { getUserByEmail } from "@/data/user"
 import { db } from "@/lib/db"
+import { NewPasswordSchema } from "@/schema"
 
 
 export const newPasswword = async (values: z.infer<typeof NewPasswordSchema>,

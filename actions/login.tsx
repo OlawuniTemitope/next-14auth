@@ -1,6 +1,5 @@
 "use server"
 
-import { LoginSchema } from "@/schema"
 import * as z from "zod"
 import {signIn} from '@/auth'
 import { DEFAULT_LOGIN_REDIRECT } from "@/route"
@@ -11,6 +10,7 @@ import { SendVerificationEail, sendTwoFactorTokenEmail } from "@/lib/mail"
 import { getTwoFactorTokenByEmail } from "@/data/two-factor-token"
 import { db } from "@/lib/db"
 import { getTwoFactorConfirmationByUserId } from "@/data/two-factor-confirmation"
+import { LoginSchema } from "@/schema"
 
 
 export const login = async (values: z.infer<typeof LoginSchema>,callbackUrl?:string) =>
